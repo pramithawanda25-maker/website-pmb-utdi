@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>UTDI - Wujudkan Masa Depan Digitalmu</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0A1F52;
+    color:white;
+}
+
+/* =====================
+   NAVBAR
+===================== */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:10px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:white;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    z-index:999;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:800;
+    color:white;
+}
+
+.logo img{
+    height:60px;
+    width:auto;
+    display:block;
+}
+
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:35px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:black;
+    font-weight:500;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#22d3ee;
+}
+
+.btn-nav{
+    text-decoration:none;
+    color:white;
+    background:linear-gradient(135deg,#22d3ee,#7c3aed);
+    padding:12px 24px;
+    border-radius:14px;
+}
+
+/* =====================
+   HERO
+===================== */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:120px 20px;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.45),
+        rgba(0,0,0,0.45)
+    ),
+    url('fotolandmark.jpg');
+
+    background-size:cover;
+    background-position:center center;
+    background-repeat:no-repeat;
+}
+
+.hero-content{
+    max-width:1000px;
+    position:relative;
+    z-index:2;
+}
+
+.hero-content h1{
+    font-size:70px;
+    line-height:1;
+    font-weight:800;
+    margin-bottom:30px;
+}
+
+.hero-content p{
+    font-size:22px;
+    line-height:1.8;
+    color:#e5e7eb;
+    max-width:900px;
+    margin:0 auto 40px;
+}
+
+.hero-btn{
+    display:inline-block;
+    padding:18px 40px;
+    border-radius:16px;
+    text-decoration:none;
+    color:white;
+    font-size:22px;
+    font-weight:600;
+    background:linear-gradient(135deg,#22d3ee,#7c3aed);
+    transition:.3s;
+}
+
+.hero-btn:hover{
+    transform:translateY(-4px);
+}
+
+/* =====================
+   MENGAPA UTDI
+===================== */
+
+section{
+    padding:100px 8%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:48px;
+    margin-bottom:60px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#122963;
+    padding:35px;
+    border-radius:24px;
+	
+	box-shadow:
+    0 10px 25px rgba(0,0,0,0.25),
+    0 5px 10px rgba(0,0,0,0.15);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    transition:all 0.3s ease;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,0.35),
+    0 10px 20px rgba(34,211,238,0.2);
+}
+
+.card h3{
+    color:#22d3ee;
+    margin-bottom:15px;
+	font-size:24px;
+    font-weight:700;
+}
+
+.alasan{
+    background:linear-gradient(
+        145deg,
+        #16367d,
+        #10275d
+    );
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,0.35);
+
+    border:1px solid rgba(255,255,255,0.1);
+}
+
+/* =====================
+   TESTIMONI ZIGZAG
+===================== */
+
+.testimonial{
+    display:flex;
+    align-items:stretch;
+    gap:40px;
+    margin-bottom:80px;
+}
+
+.testimonial.reverse{
+    flex-direction:row-reverse;
+}
+
+.testimonial-img{
+    flex:1;
+	display:flex;
+}
+
+.testimonial-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:25px;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.3);
+
+    transition:.3s;
+}
+
+.testimonial-img img:hover{
+    transform:scale(1.03);
+}
+
+.testimonial-text{
+    flex:2;
+    background:#122963;
+    padding:35px;
+    border-radius:25px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.25);
+}
+
+.testimonial-text p{
+    font-size:18px;
+    line-height:1.9;
+    margin-bottom:20px;
+}
+
+.testimonial-text h3{
+    color:#22d3ee;
+    margin-bottom:8px;
+}
+
+.testimonial-text span{
+    color:#cbd5e1;
+}
+
+/* =====================
+   FOOTER UTDI
+===================== */
+
+.footer-utdi{
+    background:#2b3267;
+    padding:60px 8% 20px;
+}
+
+.footer-container{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:50px;
+}
+
+.footer-logo{
+    width:280px;
+    max-width:100%;
+    height:auto;
+    display:block;
+    margin-bottom:25px;
+}
+
+.footer-col h2{
+    color:#ff9b21;
+    margin-bottom:20px;
+    font-size:36px;
+}
+
+.footer-col h3{
+    margin-bottom:20px;
+    font-size:28px;
+}
+
+.footer-col p{
+    line-height:1.8;
+    margin-bottom:15px;
+    color:#f1f5f9;
+}
+
+.footer-col a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    margin-bottom:15px;
+    transition:.3s;
+}
+
+.footer-col a:hover{
+    color:#22d3ee;
+}
+
+.social-links{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.social-links a{
+    background:#122963;
+    padding:10px 15px;
+    border-radius:12px;
+}
+
+.footer-utdi hr{
+    margin:40px 0 20px;
+    border:none;
+    height:1px;
+    background:rgba(255,255,255,.2);
+}
+
+.copyright{
+    text-align:center;
+    color:#cbd5e1;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+
+@media(max-width:900px){
+
+.hero-content h1{
+    font-size:65px;
+}
+
+.hero-content p{
+    font-size:18px;
+}
+
+.nav-links{
+    display:none;
+}
+
+
+.testimonial,
+.testimonial.reverse{
+    flex-direction:column;
+    text-align:center;
+}
+
+.testimonial-img{
+    justify-content:center;
+}
+
+.testimonial-img img{
+    width:280px;
+    height:350px;
+}
+
+.footer-container{
+    grid-template-columns:1fr;
+    text-align:center;
+}
+
+.footer-logo{
+	width:180px;
+    margin:auto auto 20px;
+}
+
+.social-links{
+    justify-content:center;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+	<img src="logoutdi.jpg" alt="Logo UTDI">
+</div>
+
+<ul class="nav-links">
+<li><a href="#beranda">Beranda</a></li>
+<li><a href="#mengapa">Mengapa UTDI</a></li>
+<li><a href="#fakultas">Fakultas</a></li>
+<li><a href="#beasiswa">Beasiswa</a></li>
+<li><a href="#kontak">Kontak</a></li>
+</ul>
+
+<a href="https://pmb.utdi.ac.id/" target="_blank" class="btn-nav">
+Daftar Sekarang
+</a>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero" id="beranda">
+
+<div class="hero-content">
+
+<h1>
+Wujudkan </br>
+Masa Depan </br>
+Digitalmu
+</h1>
+
+<p>
+Kampus IT pertama di Jogja yang siap mengubah kreativitas dan
+logikamu menjadi karir global terbaik di era industri digital.
+</p>
+
+<a
+href="https://pmb.utdi.ac.id/"
+target="_blank"
+class="hero-btn">
+Daftar Sekarang
+</a>
+
+</div>
+
+</section>
+
+<!-- MENGAPA UTDI -->
+
+<section id="mengapa">
+
+<h2 class="section-title">
+Mengapa Kuliah di UTDI?
+</h2>
+
+<div class="grid">
+
+<div class="card alasan">
+<h3>Pionir IT Jogja</h3>
+<p>
+Berpengalaman puluhan tahun mencetak ribuan profesional unggul di bidang teknologi informasi.
+</p>
+</div>
+
+<div class="card">
+<h3>Kurikulum Industri</h3>
+<p>
+Mengintegrasikan Artificial Intelligence, Big Data, Coding Intensif, dan Bisnis Digital.
+</p>
+</div>
+
+<div class="card">
+<h3>Fasilitas Modern</h3>
+<p>
+Laboratorium komputer modern, co-working space, dan lingkungan inovasi mahasiswa.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- FAKULTAS -->
+
+<section id="fakultas">
+
+<h2 class="section-title">
+Fakultas Teknologi Informasi
+</h2>
+
+<div class="card" style="margin-bottom:40px;">
+
+<h3>Menjadi Arsitek Masa Depan</h3>
+
+<p>
+Fakultas Teknologi Informasi (FTI) UTDI berfokus pada penguasaan teknologi terapan,
+rekayasa perangkat lunak canggih, dan pertahanan siber.
+Kurikulum kami divalidasi langsung oleh asosiasi industri.
+</p>
+
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>S1 Informatika</h3>
+<p>
+Menguasai AI, Cloud Computing, Machine Learning,
+Backend dan Frontend Development.
+</p>
+</div>
+
+<div class="card">
+<h3>S1 Sistem Informasi</h3>
+<p>
+Data Analytics, Enterprise Architecture,
+Business Intelligence dan Tata Kelola IT.
+</p>
+</div>
+
+<div class="card">
+<h3>S1 Teknik Komputer</h3>
+<p>
+Cybersecurity, Jaringan Komputer,
+Internet of Things (IoT) dan Embedded System.
+</p>
+</div>
+
+</div>
+
+<br><br><br>
+
+<h2 class="section-title">
+Fakultas Manajemen Bisnis
+</h2>
+
+<div class="card" style="margin-bottom:40px;">
+
+<p>
+Melahirkan pemimpin bisnis modern, pengusaha digital mandiri,
+dan ahli strategi ritel masa kini berbasis data teknologi tingkat tinggi.
+</p>
+
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h3>S1 Bisnis Digital</h3>
+
+<ul>
+<li>Digital Marketing</li>
+<li>SEO & SEM</li>
+<li>E-Commerce</li>
+<li>FinTech</li>
+<li>Startup Business</li>
+</ul>
+
+</div>
+
+<div class="card">
+<h3>S1 Manajemen Ritel</h3>
+
+<ul>
+<li>Supply Chain Management</li>
+<li>Retail Strategy</li>
+<li>Omnichannel Marketing</li>
+<li>Retail Analytics</li>
+<li>Logistik Modern</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- TESTIMONI -->
+
+<section id="testimoni">
+
+<h2 class="section-title">
+Apa Kata Mahasiswa UTDI?
+</h2>
+
+<div class="testimonial">
+
+    <div class="testimonial-img">
+        <img src="ana.jpg.jpeg">
+    </div>
+
+    <div class="testimonial-text">
+        <p>
+        "Satu hal yang paling aku syukuri kuliah di UTDI itu lingkungannya. Di sini aku ketemu temen-temen sefrekuensi yang seru diajak kolaborasi dan selalu saling dukung buat nyoba hal-hal baru. Kampus ini bener-bener jadi wadah yang tepat buat kita yang pengen berkembang dan melek teknologi. Serius, kamu harus ngerasain sendiri keseruannya, yuk buruan daftar dan jadi bagian dari UTDI!"
+        </p>
+
+        <h3>— Ananda Enjelina P</h3>
+        <span>Mahasiswa S1 Bisnis Digital UTDI</span>
+    </div>
+
+</div>
+
+
+<div class="testimonial reverse">
+
+    <div class="testimonial-img">
+        <img src="devina.jpg.jpeg">
+    </div>
+
+    <div class="testimonial-text">
+        <p>
+        "Ngerasa beruntung banget kuliah di UTDI karena dosen-dosennya nggak cuma sekadar ngajar, tapi bisa jadi mentor diskusi yang asik banget. Mereka selalu dukung inovasi dan kreativitas apa pun yang pengen kita coba."
+        </p>
+
+        <h3>— Devina Cristin N</h3>
+        <span>Mahasiswa S1 Bisnis Digital UTDI</span>
+    </div>
+
+</div>
+
+
+<div class="testimonial">
+
+    <div class="testimonial-img">
+        <img src="mitha.jpg.jpeg">
+    </div>
+
+    <div class="testimonial-text">
+        <p>
+        "Selama kuliah di UTDI, aku ngerasa soft skill dan hard skill-ku bener-bener diasah seimbang. Kampus ini tahu banget apa yang dibutuhin sama industri kerja sekarang, jadi pas lulus nanti ngerasa lebih percaya diri!"
+        </p>
+
+        <h3>— Pramitha Wanda K</h3>
+        <span>Mahasiswa S1 Bisnis Digital UTDI</span>
+    </div>
+
+</div>
+
+
+<div class="testimonial reverse">
+
+    <div class="testimonial-img">
+        <img src="sofia.jpg.jpeg">
+    </div>
+
+    <div class="testimonial-text">
+        <p>
+        "Aku suka banget sama vibes kampus UTDI. Di sini kita nggak cuma dicekokin teori, tapi bener-bener ditantang buat langsung praktik. Kuliahnya asik, tugas-tugasnya pun menantang tapi bikin kita makin berkembang."
+        </p>
+
+        <h3>— Sofiatus Solehah</h3>
+        <span>Mahasiswa S1 Bisnis Digital UTDI</span>
+    </div>
+
+</div>
+
+
+<div class="testimonial">
+
+    <div class="testimonial-img">
+        <img src="kezia.jpg.jpeg">
+    </div>
+
+    <div class="testimonial-text">
+        <p>
+        "Kuliah di UTDI itu paket lengkap. Ilmunya dapet, relasinya luas, dan prospek kerjanya jelas banget karena kita dididik buat siap kerja di era transformasi digital ini."
+        </p>
+
+        <h3>— Kezia Jennyfer K</h3>
+        <span>Mahasiswa S1 Bisnis Digital UTDI</span>
+    </div>
+
+</div>
+
+</section>
+
+<!-- BEASISWA -->
+
+<section id="beasiswa">
+
+<h2 class="section-title">
+Skema Beasiswa Kuliah UTDI
+</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>Beasiswa KIP Kuliah</h3>
+
+<p>
+Bebas SPP Tetap & Variabel 100% Hingga Lulus.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Beasiswa Yayasan UTDI</h3>
+
+<p>
+Beasiswa penuh berupa pembebasan biaya SPA dan SPP
+hingga lulus sesuai ketentuan yang berlaku.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- KONTAK -->
+
+<section id="kontak">
+
+<h2 class="section-title">
+Mulai Karir Digitalmu!
+</h2>
+
+<div class="card"
+style="
+max-width:900px;
+margin:auto;
+text-align:center;
+">
+
+<p style="margin-bottom:30px;">
+Penerimaan Mahasiswa Baru Tahun Akademik 2026/2027
+telah resmi dibuka.
+Hubungi admin pendaftaran kami hari ini.
+</p>
+
+<a
+href="https://pmb.utdi.ac.id/"
+target="_blank"
+class="hero-btn">
+
+Daftar Sekarang
+
+</a>
+
+</div>
+
+</section>
+
+<footer class="footer-utdi">
+
+<div class="footer-container">
+
+    <!-- KOLOM 1 -->
+    <div class="footer-col">
+
+        <img src="logo2.jpg" alt="Logo UTDI" class="footer-logo">
+
+        <p>
+            Universitas Teknologi Digital Indonesia (UTDI)
+            - dahulu STMIK Akakom
+        </p>
+
+        <p>
+            Jl. Raya Janti Karang Jambe No.143<br>
+            Yogyakarta 55198, Indonesia
+        </p>
+
+    </div>
+
+    <!-- KOLOM 2 -->
+    <div class="footer-col">
+
+        <h2>Informasi</h2>
+
+        <p>📞 +62 274 486664</p>
+
+        <p>✉ info@utdi.ac.id</p>
+
+        <br>
+
+        <h2>Ikuti Kami</h2>
+
+        <div class="social-links">
+
+            <a href="https://www.facebook.com/utdi.official/" target="_blank">Facebook</a>
+
+            <a href="https://www.instagram.com/utdi.official/" target="_blank">Instagram</a>
+
+            <a href="https://www.youtube.com/@UTDIOfficial" target="_blank">Youtube</a>
+
+            <a href="https://www.linkedin.com/school/utdi/" target="_blank">LinkedIn</a>
+
+        </div>
+
+    </div>
+
+    <!-- KOLOM 3 -->
+    <div class="footer-col">
+
+        <h2>Tautan</h2>
+
+        <a href="https://keuportal.utdi.ac.id/" target="_blank">
+            KEUPORTAL
+        </a>
+
+        <a href="https://siakad.utdi.ac.id/" target="_blank">
+            SIAKAD
+        </a>
+
+        <a href="https://siwali.utdi.ac.id/" target="_blank">
+            SIWALI
+        </a>
+
+        <a href="https://utdi.ac.id/" target="_blank">
+            Website UTDI
+        </a>
+
+    </div>
+
+</div>
+
+<hr>
+
+<div class="copyright">
+    © 2026 Universitas Teknologi Digital Indonesia
+</div>
+
+</footer>
+
+</body>
+</html>
